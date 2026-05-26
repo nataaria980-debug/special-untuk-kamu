@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Zizi ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:linear-gradient(135deg,#ff8fb1,#ffc8da,#ffeaf1);
+  overflow-x:hidden;
+  color:white;
+  min-height:100vh;
+  position:relative;
+}
+
+/* BACKGROUND */
+body::before{
+  content:'';
+  position:fixed;
+  width:700px;
+  height:700px;
+  background:rgba(255,255,255,0.15);
+  border-radius:50%;
+  top:-200px;
+  left:-200px;
+  filter:blur(120px);
+  z-index:0;
+}
+
+body::after{
+  content:'';
+  position:fixed;
+  width:600px;
+  height:600px;
+  background:rgba(255,255,255,0.12);
+  border-radius:50%;
+  bottom:-200px;
+  right:-150px;
+  filter:blur(120px);
+  z-index:0;
+}
+
+/* BINTANG */
+.stars{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background-image:
+  radial-gradient(white 1px, transparent 1px);
+  background-size:40px 40px;
+  opacity:0.3;
+  animation:moveStars 30s linear infinite;
+  z-index:0;
+}
+
+@keyframes moveStars{
+  from{
+    transform:translateY(0);
+  }
+  to{
+    transform:translateY(100px);
+  }
+}
+
+/* INTRO */
+.intro{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:linear-gradient(135deg,#ff7fa8,#ffb7cc);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  z-index:9999;
+  transition:1s;
+  text-align:center;
+  padding:20px;
+}
+
+.intro h1{
+  font-size:55px;
+  margin-bottom:20px;
+  text-shadow:0 0 20px white;
+}
+
+.intro p{
+  font-size:20px;
+  max-width:700px;
+  line-height:1.8;
+}
+
+/* BUTTON */
+.start-btn,
+.btn{
+  margin-top:30px;
+  padding:15px 35px;
+  border:none;
+  border-radius:50px;
+  background:white;
+  color:#ff4f88;
+  font-size:18px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.start-btn:hover,
+.btn:hover{
+  transform:scale(1.08);
+}
+
+/* MUSIC */
+.music-player{
+  position:fixed;
+  top:20px;
+  right:20px;
+  z-index:999;
+  background:rgba(255,255,255,0.15);
+  backdrop-filter:blur(10px);
+  padding:15px;
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  padding:20px;
+  position:relative;
+  z-index:2;
+}
+
+.profile{
+  width:240px;
+  height:240px;
+  border-radius:50%;
+  object-fit:cover;
+  border:6px solid white;
+  box-shadow:0 10px 35px rgba(0,0,0,0.25);
+  animation:float 3s ease-in-out infinite;
+  cursor:pointer;
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(-15px);
+  }
+}
+
+.hero h1{
+  margin-top:30px;
+  font-size:65px;
+  text-shadow:0 0 20px white;
+}
+
+/* TEXT ROMANTIS */
+.typing-text{
+  margin-top:20px;
+  font-size:22px;
+  max-width:700px;
+  line-height:1.8;
+  text-align:center;
+  padding:0 15px;
+  word-wrap:break-word;
+  overflow-wrap:break-word;
+  white-space:normal;
+  animation:fadeTyping 2s ease;
+  text-shadow:0 0 12px rgba(255,255,255,0.4);
+}
+
+@keyframes fadeTyping{
+
+  from{
+    opacity:0;
+    transform:translateY(20px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* PESAN */
+.love-message{
+  margin-top:25px;
+  max-width:750px;
+  font-size:22px;
+  line-height:1.9;
+  text-align:center;
+  text-shadow:0 0 15px rgba(255,255,255,0.5);
+  animation:fadeText 3s ease-in-out infinite;
+}
+
+@keyframes fadeText{
+  0%,100%{
+    opacity:0.8;
+    transform:translateY(0);
+  }
+
+  50%{
+    opacity:1;
+    transform:translateY(-5px);
+  }
+}
+
+/* HEART */
+.heart{
+  position:fixed;
+  color:white;
+  pointer-events:none;
+  animation:explode 1.5s linear forwards;
+  z-index:999;
+}
+
+@keyframes explode{
+  0%{
+    opacity:1;
+    transform:translateY(0) scale(1);
+  }
+
+  100%{
+    opacity:0;
+    transform:translateY(-150px) scale(2);
+  }
+}
+
+/* HUJAN */
+.zizi{
+  position:fixed;
+  top:-50px;
+  color:white;
+  font-weight:bold;
+  animation:fall linear forwards;
+  pointer-events:none;
+  z-index:1;
+}
+
+@keyframes fall{
+  to{
+    transform:translateY(110vh) rotate(360deg);
+  }
+}
+
+/* SECTION */
+section{
+  padding:90px 10%;
+  position:relative;
+  z-index:2;
+}
+
+.title{
+  text-align:center;
+  font-size:45px;
+  margin-bottom:40px;
+}
+
+/* SURAT */
+.letter-box{
+  max-width:850px;
+  margin:auto;
+  background:rgba(255,255,255,0.15);
+  padding:35px;
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+  line-height:2;
+  font-size:18px;
+  text-align:center;
+}
+
+/* GALERI */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:25px;
+}
+
+.photo-card{
+  background:rgba(255,255,255,0.15);
+  padding:15px;
+  border-radius:25px;
+  backdrop-filter:blur(10px);
+  transition:0.4s;
+}
+
+.photo-card:hover{
+  transform:translateY(-10px);
+}
+
+.photo-card img{
+  width:100%;
+  height:320px;
+  object-fit:cover;
+  border-radius:20px;
+}
+
+.photo-card p{
+  text-align:center;
+  margin-top:12px;
+}
+
+/* WA */
+.wa-box{
+  max-width:700px;
+  margin:auto;
+  background:rgba(255,255,255,0.15);
+  padding:30px;
+  border-radius:30px;
+  backdrop-filter:blur(10px);
+  text-align:center;
+}
+
+textarea{
+  width:100%;
+  height:150px;
+  border:none;
+  border-radius:20px;
+  padding:20px;
+  resize:none;
+  outline:none;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:rgba(0,0,0,0.15);
+  position:relative;
+  z-index:2;
+}
+
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div class="intro" id="intro">
+
+  <h1>Zizi ❤️</h1>
+
+  <p>
+    "Kamu terlalu indah untuk dijelaskan dengan kata-kata,
+    dan mungkin hanya lagu ini yang bisa menyampaikannya ✨"
+  </p>
+
+  <button class="start-btn" onclick="openWebsite()">
+    Buka Website 💌
+  </button>
+
+</div>
+
+<div class="stars"></div>
+
+<!-- MUSIC -->
+<div class="music-player">
+  <p>🎵 Lagu Kita</p>
+
+  <audio controls loop id="music">
+    <source src="pemujarahasia.mp3" type="audio/mpeg">
+  </audio>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+
+  <img src="fotoku.png" class="profile" id="profile">
+
+  <h1>Zizi ❤️</h1>
+
+  <p class="typing-text">
+    "Aku gak butuh seseorang yang sempurna,
+    aku cuma butuh seseorang yang tetap tinggal,
+    tetap memahami, dan tetap memilih aku
+    bahkan saat dunia sedang gak baik-baik saja ❤️"
+  </p>
+
+  <p class="love-message">
+    "Terima kasih karena sudah hadir,
+    menjadi rumah yang paling nyaman,
+    dan alasan kenapa aku selalu tersenyum ❤️"
+  </p>
+
+</div>
+
+<!-- SURAT -->
+<section>
+
+  <h1 class="title">Untuk Kamu 🌸</h1>
+
+  <div class="letter-box">
+
+    Hai Zizi ❤️  
+    Makasih ya udah hadir sejauh ini.  
+    Kadang aku gak pandai ngungkapin semuanya,
+    tapi aku selalu senang kalau sama kamu.
+
+    <br><br>
+
+    Kalau suatu hari kamu capek,
+    jangan lupa istirahat ya.
+    Aku bakal tetap dukung kamu ✨
+
+  </div>
+
+</section>
+
+<!-- GALERI -->
+<section>
+
+  <h1 class="title">Foto Kita 📸</h1>
+
+  <div class="gallery">
+
+    <div class="photo-card">
+      <img src="nikahan2.png">
+      <p>Moment favorit ❤️</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="aku.png">
+      <p>Hari bahagia 🌸</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="sayang.png">
+      <p>Terima kasih sudah hadir ✨</p>
+    </div>
+
+    <div class="photo-card">
+      <img src="kamu.png">
+      <p>Aku bangga sama kamu 🫶</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- WA -->
+<section>
+
+  <h1 class="title">Kirim Pesan 💌</h1>
+
+  <div class="wa-box">
+
+    <textarea 
+      id="waMessage"
+      placeholder="Tulis pesan manis..."
+    ></textarea>
+
+    <button class="btn" onclick="sendWhatsApp()">
+      Kirim ke WhatsApp ❤️
+    </button>
+
+  </div>
+
+</section>
+
+<footer>
+  Dibuat khusus untuk Zizi ❤️
+</footer>
+
+<script>
+
+// INTRO
+function openWebsite(){
+
+  document
+  .getElementById("intro")
+  .style.opacity = "0";
+
+  setTimeout(()=>{
+    document
+    .getElementById("intro")
+    .style.display = "none";
+  },1000);
+
+  document
+  .getElementById("music")
+  .play();
+
+  loveRain();
+
+}
+
+// FOTO HATI
+const profile = document.getElementById("profile");
+
+profile.addEventListener("click", function(e){
+
+  for(let i=0;i<25;i++){
+
+    const heart = document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "🤍";
+
+    heart.style.left =
+    (e.clientX + (Math.random()*120-60)) + "px";
+
+    heart.style.top =
+    (e.clientY + (Math.random()*120-60)) + "px";
+
+    heart.style.fontSize =
+    (20 + Math.random()*25) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+      heart.remove();
+    },1500);
+
+  }
+
+});
+
+// HUJAN
+function createZizi(){
+
+  const zizi =
+  document.createElement("div");
+
+  zizi.classList.add("zizi");
+
+  const words = [
+    "Zizi ❤️",
+    "I Love You 🌸",
+    "Forever 🤍",
+    "Sayang ✨"
+  ];
+
+  zizi.innerHTML =
+  words[Math.floor(Math.random()*words.length)];
+
+  zizi.style.left =
+  Math.random()*100 + "vw";
+
+  zizi.style.animationDuration =
+  (3 + Math.random()*5) + "s";
+
+  zizi.style.fontSize =
+  (18 + Math.random()*15) + "px";
+
+  document.body.appendChild(zizi);
+
+  setTimeout(()=>{
+    zizi.remove();
+  },8000);
+
+}
+
+setInterval(createZizi,250);
+
+// LOVE EFFECT
+function loveRain(){
+
+  for(let i=0;i<40;i++){
+
+    const heart =
+    document.createElement("div");
+
+    heart.classList.add("heart");
+
+    heart.innerHTML = "🤍";
+
+    heart.style.left =
+    Math.random()*100 + "vw";
+
+    heart.style.top = "80vh";
+
+    heart.style.fontSize =
+    (20 + Math.random()*30) + "px";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>{
+      heart.remove();
+    },1500);
+
+  }
+
+}
+
+// WHATSAPP
+function sendWhatsApp(){
+
+  const message =
+  document.getElementById("waMessage").value;
+
+  const number =
+  "6289516129314";
+
+  const url =
+  `https://wa.me/${number}?text=${encodeURIComponent(message)}`;
+
+  window.open(url,'_blank');
+
+}
+
+</script>
+
+</body>
+</html>
